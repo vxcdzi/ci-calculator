@@ -12,15 +12,13 @@ while time <= 0:
         print("The time period cannot be equal to or less than zero years")
 
 rate = float(input("Enter the rate of interest = "))
-while rate <= 0:
+while rate < 0:
     rate = float(input("Enter the rate of interest = "))
-    if rate <= 0:
-       print("The rate of interest cann500ot be equal to or less than zero")
+    if rate < 0:
+       print("The rate of interest cannot be less than zero")
 
 
 amount = principal*(1+rate/100)**time
 ci = amount - principal
 print(f"The amount to be paid after the addition of compound interest is equal to ${amount:.2f}")
 print(f"The compound interest after {time} year(s) is equal to ${ci:.2f}")
-
-
